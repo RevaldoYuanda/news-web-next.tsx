@@ -1,0 +1,2 @@
+# news-web-next.tsx
+WEB-BERITA-PORTOFOLIO-SEDERHANA
