@@ -140,6 +140,14 @@ li {
   text-align: justify;
   line-height: 1.6; /* Line spacing untuk paragraf */
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Responsivitas */
 @media (max-width: 768px) {
   /* Navbar responsif */
@@ -149,15 +157,14 @@ li {
   }
 
   nav ul {
-    flex-direction: column;
-    width: 100%;
+    justify-content: center; /* Center align items on smaller screens */
+    overflow-x: auto; /* Tambahkan scroll jika terlalu panjang untuk layar */
   }
 
   nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
+    margin-left: 10px; /* Kurangi jarak antar item di layar kecil */
+    margin-right: 10px;
   }
-
   /* Konten responsif */
   .page-container {
     padding: 10px;
@@ -168,6 +175,9 @@ li {
     margin-left: 5%;
     margin-right: 5%;
   }
+  img {
+    width: 100%; /* Membuat gambar menyesuaikan dengan lebar kontainer */
+  }
 }
 
 @media (max-width: 480px) {
@@ -176,13 +186,20 @@ li {
     font-size: 18px;
   }
 
-  nav ul li {
-    margin-top: 8px;
+  nav ul {
+    justify-content: start; /* Align to the start of the navbar */
   }
 
+  nav ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   .page-container p {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 14px;
+  }
+  img {
+    width: 100%; /* Membuat gambar menyesuaikan dengan lebar kontainer */
   }
 }
