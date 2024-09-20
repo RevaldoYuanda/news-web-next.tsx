@@ -1,0 +1,188 @@
+/* styles/globals.css */
+:root {
+  --primary-color: #0070f3;
+  --secondary-color: #f1f1f1;
+  --text-color: #333;
+  --font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+}
+/* styles/globals.css */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Optional: styling untuk konten dalam halaman */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  margin-top: 40px; /* Atur jarak atas heading */
+  line-height: 1.3; /* Menambahkan line spacing untuk heading */
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify; /* Optional: untuk membuat teks lebih rapi */
+  line-height: 1.6; /* Line spacing untuk paragraf */
+}
+
+li {
+  margin-bottom: 20px;
+
+}
+/* app/page.module.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 170px; /* Jarak 80px dari atas untuk menghindari overlap dengan navbar */
+  text-align: center; /* Center text */
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  margin:  0 200px;
+}
+
+
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 10px 0 0;
+}
+/* Kontainer konten halaman */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Atur paragraf dengan margin kiri dan kanan yang proporsional */
+.page-container p {
+  margin-bottom: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+  line-height: 1.6; /* Line spacing untuk paragraf */
+}
+/* Responsivitas */
+@media (max-width: 768px) {
+  /* Navbar responsif */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Konten responsif */
+  .page-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .page-container p {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ukuran font yang lebih kecil untuk ponsel */
+  nav h1 {
+    font-size: 18px;
+  }
+
+  nav ul li {
+    margin-top: 8px;
+  }
+
+  .page-container p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 14px;
+  }
+}
